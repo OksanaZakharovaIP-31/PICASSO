@@ -91,19 +91,12 @@ POST=
 python namage.py makemigrations
 python manage.py migrate
 ```
-8. Создать super user`а
 
-`python manage.py createsuperuser`
-
-9. Создать в Menu Categry(s) категорию `main_menu`
-
-10. Создать в меню пункты, выбрав категорию - `main_menu`
-
-11. Запуск проекта в папке TaskTree\TreeApp
+7. Запуск проекта
 
 `python manage.py runserver`
 
-12. Отправка POST запросов через [Postman](https://www.postman.com/downloads/)
+8. Отправка POST запросов через [Postman](https://www.postman.com/downloads/)
 
 После регистрации, перейти `File -> New Tab`
 
