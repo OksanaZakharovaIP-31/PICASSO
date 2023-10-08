@@ -54,3 +54,63 @@
 Попробуйте оценить, какую нагрузку в RPS сможет выдержать ваш сервис
 
 </details>
+
+# Запуск приложения
+
+1. Клонирование репозитория
+
+`https://github.com/OksanaZakharovaIP-31/TestTaskTree.git`
+
+2. Установка виртуального окружения и его активация
+
+`python -m venv venv`
+
+`venv\Scripts\activate.bat` - Windows
+
+`source venv/bin/activate` - Linux and MacOS
+
+3. Установка зависимостей
+
+`pip install -r requirements.txt`
+
+4. База данных - PostgreSQL. можно использовать любоую соглаcно [документации](https://docs.djangoproject.com/en/4.2/ref/databases/)
+5. Все ключи, пароли храняться в файле .env (создать в папке проекта) (заполнить для себя)
+
+```
+SECRET_KEY=
+DEBUG=
+NAME_DB=
+USER_DB=
+PASSWORD_DB=
+HOST_DB=
+POST=
+```
+
+6. Запуск миграций
+```
+python namage.py makemigrations
+python manage.py migrate
+```
+8. Создать super user`а
+
+`python manage.py createsuperuser`
+
+9. Создать в Menu Categry(s) категорию `main_menu`
+
+10. Создать в меню пункты, выбрав категорию - `main_menu`
+
+11. Запуск проекта в папке TaskTree\TreeApp
+
+`python manage.py runserver`
+
+12. Отправка POST запросов через [Postman](https://www.postman.com/downloads/)
+
+После регистрации, перейти `File -> New Tab`
+
+Выбрать метод POST
+
+На вкладке `Body` выбираем пункт `form-data`
+
+Значение `Key` заполнить `file` и слева в раскрывающимся меню выбрать `file`
+
+После этого в значении `Value` можно загрузить необходимый файл
